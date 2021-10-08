@@ -1,0 +1,249 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+body {
+  font-family: "Montserrat", montserrat;
+  font-weight: 700;
+  font-size: 15px;
+  background: hsl(240, 78%, 98%);
+}
+
+.mainSection {
+  background: url(images/bg-top.svg) no-repeat right top,
+    url(images/bg-bottom.svg) no-repeat left bottom;
+  background-size: 20%;
+}
+
+.top {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.top h1 {
+  font-size: 40px;
+  color: hsl(232, 13%, 33%);
+}
+
+.cardsBloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 900px;
+  text-align: center;
+}
+.basic {
+  box-shadow: -6px 6px 17px 1px rgba(0, 0, 0, 0.1);
+}
+
+.professional {
+  box-shadow: 0px 6px 17px 1px rgba(0, 0, 0, 0.2);
+}
+
+.master {
+  box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+  background: white;
+  padding: 10%;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 600px;
+  padding: 70px 50px;
+}
+
+.soloCard {
+  background: linear-gradient(#a3a8f0, #696fdd);
+  /*padding: 5%;*/
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 700px;
+  padding: 70px 50px;
+}
+
+.learnBtn {
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  background: linear-gradient(#a3a8f0, #696fdd);
+  border-radius: 5px;
+  border: 1px solid #696fdd;
+}
+
+.learnBtn:hover {
+  color: #696fdd;
+  border: 1px solid #696fdd;
+  padding: 15px 50px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.learnBtnAlone {
+  color: #696fdd;
+  border: none;
+  padding: 15px 50px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.learnBtnAlone:hover {
+  border: 1px solid white;
+  color: white;
+  padding: 15px 50px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dollars {
+  font-size: 60px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #696fdd;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #696fdd;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #696fdd;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.roundedSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(234, 14%, 74%);
+}
+
+@media (max-width: 768px) {
+  .cardsBloc {
+    flex-flow: column;
+  }
+
+  .roundedSwitch {
+    padding-bottom: 150px;
+  }
+
+  .cards {
+    background: white;
+    padding: 10%;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 600px;
+    padding: 70px 50px;
+    margin-bottom: 50px;
+  }
+
+  .soloCard {
+    background: linear-gradient(#a3a8f0, #696fdd);
+    /*padding: 5%;*/
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 600px;
+    padding: 70px 50px;
+    margin-bottom: 50px;
+  }
+
+  .cardsBloc {
+    height: 2500px;
+    margin-bottom: 20px;
+    margin-top: -350px;
+  }
+
+  .professional {
+    box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .mainSection {
+    background: url(images/bg-top.svg) no-repeat right top;
+    background-size: 45%;
+  }
+}
